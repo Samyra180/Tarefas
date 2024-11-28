@@ -56,7 +56,7 @@ como notificações ou prazos. A interface gráfica também será simples, com f
 - **RNF03**: A aplicação utiliza SQLite para persistência de dados.
 
 
-## Desenvolvimento do Projeto
+## Elaboração do Projeto
 ### Arquitetura
 
 A arquitetura da aplicação é simples e dividida em duas partes principais:
