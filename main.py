@@ -3,22 +3,29 @@ from tkinter import messagebox, font
 import db  # Importa as funções do db.py
 import sqlite3
 
+frame_em_edicao = None
 
 # Função para criar a janela de abertura
 def janela_abertura():
     # Criar a janela de abertura
     splash = tk.Tk()
+    splash.iconbitmap("imgs/list.ico")  # Define o ícone da janela
     splash.geometry("510x500")  # Tamanho da janela de abertura
     splash.title("Bem-vindo ao Organizador de Tarefas")
 
-    # Adiciona uma imagem ou texto à janela de abertura (pode ser uma imagem de logo)
-    label = tk.Label(splash, text="Carregando...", font=("Arial", 20))
+    # Definir cor de fundo suave
+    splash.config(bg="#f0f0f0")  # Cor de fundo suave
+
+    # Centralizar a janela de texto
+    label = tk.Label(splash, text="Carregando...", font=("Arial", 24), bg="#f0f0f0", fg="#4CAF50")
     label.pack(expand=True)
 
-    # Fechar a janela de abertura após alguns segundos
-    splash.after(3000, lambda: (splash.destroy(), janela_principal()))  # Fecha após 3 segundos e chama a janela principal
+    # Fechar a janela de abertura após 2 segundos e chamar a janela principal
+    splash.after(2000, lambda: (splash.destroy(), janela_principal()))  # Fecha após 2 segundos e chama a janela principal
 
     splash.mainloop()
+
+
 
 # Criar a janela principal
 def janela_principal():
@@ -29,7 +36,7 @@ def janela_principal():
     janela.geometry("510x500")  # Define o tamanho da janela
     janela.resizable(False, False)  # Bloqueia o redimensionamento da janela
 
-    frame_em_edicao = None
+    
 
     # Função para adicionar tarefa
     def adicionar_tarefa():
