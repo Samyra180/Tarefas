@@ -7,20 +7,17 @@ frame_em_edicao = None
 
 # Função para criar a janela de abertura
 def janela_abertura():
-    # Criar a janela de abertura
+    
     splash = tk.Tk()
-    splash.iconbitmap("imgs/list.ico")  # Define o ícone da janela
+    splash.iconbitmap("Tarefas\imgs\list.ico")  # Define o ícone da janela
     splash.geometry("510x500")  # Tamanho da janela de abertura
     splash.title("Bem-vindo ao Organizador de Tarefas")
-
-    # Definir cor de fundo suave
     splash.config(bg="#f0f0f0")  # Cor de fundo suave
 
     # Centralizar a janela de texto
     label = tk.Label(splash, text="Carregando...", font=("Arial", 24), bg="#f0f0f0", fg="#4CAF50")
     label.pack(expand=True)
 
-    # Fechar a janela de abertura após 2 segundos e chamar a janela principal
     splash.after(2000, lambda: (splash.destroy(), janela_principal()))  # Fecha após 2 segundos e chama a janela principal
 
     splash.mainloop()
@@ -30,7 +27,7 @@ def janela_abertura():
 # Criar a janela principal
 def janela_principal():
     janela = tk.Tk()
-    janela.iconbitmap("imgs/list.ico")  # Define o ícone da janela
+    janela.iconbitmap("Tarefas\imgs\list.ico")  # Define o ícone da janela
     janela.title("Organizador de tarefas")  # Define o título da janela
     janela.configure(bg="#F0F0F0")  # Cor de fundo da janela
     janela.geometry("510x500")  # Define o tamanho da janela
@@ -125,8 +122,8 @@ def janela_principal():
     cursor = conexao.cursor()
 
     # Configuração da interface gráfica
-    icon_editar = tk.PhotoImage(file="imgs/edit.png").subsample(15, 15)
-    icon_deletar = tk.PhotoImage(file="imgs/delete.png").subsample(15, 15)
+    icon_editar = tk.PhotoImage(file="Tarefas\imgs\edit.png").subsample(15, 15)
+    icon_deletar = tk.PhotoImage(file="Tarefas\imgs\delete.png").subsample(15, 15)
 
     # Título da aplicação
     fonte_cabecalho = font.Font(family="Garamond", size=24, weight="bold")

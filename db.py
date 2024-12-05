@@ -49,11 +49,7 @@ def deletar_tarefa(id_tarefa):
 def atualizar_tarefa(id_tarefa, nova_descricao):
     conexao = sqlite3.connect("tarefas.db")
     cursor = conexao.cursor()
-
-    # Atualiza a descrição e a data de modificação da tarefa com o id especificado
     cursor.execute("UPDATE tarefas SET descricao = ? WHERE id = ?", (nova_descricao, id_tarefa))
-
-
     conexao.commit()
     conexao.close()
 
