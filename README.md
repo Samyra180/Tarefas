@@ -1,7 +1,7 @@
-# SAMYRA MENDES LIMA
+# Samyra Mendes Lima
 # UFCD 10790 - Projeto de Programação
-# FORMADOR - JOÃO PEDRO BARBOSA DAVID
-# Sistema Gestão DE TAREFAS
+# Formador - João Pedro Barbosa David
+# Sistema Gestão de tarefas
 
 Uma aplicação simples desenvolvida em Python para gerir tarefas, permite adicionar, visualizar, editar e remover tarefas.
 
